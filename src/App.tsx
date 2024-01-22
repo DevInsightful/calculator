@@ -1,7 +1,11 @@
 import "./App.css";
 
 function App() {
-  return <h1 className="text-red-500">Hello World</h1>;
+  return (
+    <div className="flex justify-between items-center">
+      <h1>Hello, World</h1>
+    </div>
+  );
 }
 
 export default App;

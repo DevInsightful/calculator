@@ -1,9 +1,10 @@
 import "./App.css";
+import Calculator from "./Components/Calculator";
 
 function App() {
   return (
-    <div className="flex justify-center items-center min-h-[100vh]">
-      <h1>Hello, World</h1>
+    <div className="parent flex justify-center items-center min-h-[100vh]">
+      <Calculator />
     </div>
   );
 }

@@ -1,11 +1,29 @@
+import { useState } from "react";
+
 interface val {
-  value: number;
+  value: number | string;
 }
 const Button: React.FC<val> = ({ value }) => {
+  const [yellow] = useState(["/", "X", "-", "+", "="]);
+  const [gray] = useState(["AC", "+-", "%"]);
+
+  const isYellow = yellow.includes(value as any);
+  const isGray = yellow.includes(gray as any);
   return (
-    <div className="bg-[#292929] text-white h-[3rem] w-[3rem] rounded-full flex justify-center items-center">
-      <h6 className="font-semibold text-2xl">{value}</h6>
-    </div>
+    <button
+      className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl 
+    ${value == 0 ? "w-[8.2rem]" : "w-[3.5rem]"}
+    ${
+      !isYellow && !isGray
+        ? "bg-[#292929]"
+        : isYellow
+        ? "bg-[#fea400]"
+        : "bg-[#7f7f7f]"
+    }
+      `}
+    >
+      {value}
+    </button>
   );
 };
 

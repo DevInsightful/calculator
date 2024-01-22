@@ -2,10 +2,30 @@ import { useState } from "react";
 import Button from "./Button";
 
 const Calculator = () => {
-  const [values, setValues] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
+  const [values, _setValues] = useState([
+    "AC",
+    "+-",
+    "%",
+    "/",
+    7,
+    8,
+    9,
+    "X",
+    4,
+    5,
+    6,
+    "-",
+    1,
+    2,
+    3,
+    "+",
+    0,
+    ".",
+    "=",
+  ]);
+  // values.reverse();
   return (
-    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl">
+    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl flex flex-wrap gap-4  ">
       {values.map((value, idx) => {
         return <Button value={value} key={idx} />;
       })}

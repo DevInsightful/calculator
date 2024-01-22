@@ -23,9 +23,8 @@ const Calculator = () => {
     ".",
     "=",
   ]);
-  // values.reverse();
   return (
-    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl flex flex-wrap gap-4  ">
+    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl flex flex-wrap gap-4 justify-center">
       {values.map((value, idx) => {
         return <Button value={value} key={idx} />;
       })}

@@ -9,8 +9,12 @@ const Button: React.FC<val> = ({ value }) => {
 
   const isYellow = yellow.includes(value as any);
   const isGray = yellow.includes(gray as any);
+  const handleClick = (value: any) => {
+    console.log(value);
+  };
   return (
     <button
+      onClick={() => handleClick(value)}
       className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl 
     ${value == 0 ? "w-[8.2rem]" : "w-[3.5rem]"}
     ${

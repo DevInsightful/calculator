@@ -11,6 +11,7 @@ const Button: React.FC<val> = ({ value }) => {
   const isGray = yellow.includes(gray as any);
   const handleClick = (value: any) => {
     console.log(value);
+    // first task is to manage these colors and then to add the display after all work on the functionality
   };
   return (
     <button

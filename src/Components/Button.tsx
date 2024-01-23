@@ -8,11 +8,11 @@ const Button: React.FC<val> = ({ value }) => {
   const [gray] = useState(["AC", "+-", "%"]);
 
   const isYellow = yellow.includes(value as any);
-  const isGray = yellow.includes(gray as any);
+  const isGray = gray.includes(value as any);
   const handleClick = (value: any) => {
     console.log(value);
-    // first task is to manage these colors and then to add the display after all work on the functionality
   };
+  // add the display after all work on the functionality
   return (
     <button
       onClick={() => handleClick(value)}

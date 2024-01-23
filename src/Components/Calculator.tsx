@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Button from "./Button";
+import Screen from "./Screen";
 
 const Calculator = () => {
-  const [values, _setValues] = useState([
+  const [options, _setOptions] = useState([
     "AC",
     "+-",
     "%",
@@ -25,8 +26,9 @@ const Calculator = () => {
   ]);
   return (
     <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl flex flex-wrap gap-4 justify-center">
-      {values.map((value, idx) => {
-        return <Button value={value} key={idx} />;
+      <Screen />
+      {options.map((options, idx) => {
+        return <Button value={options} key={idx} />;
       })}
     </div>
   );

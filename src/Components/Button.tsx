@@ -12,7 +12,7 @@ const Button: React.FC<val> = ({ value }) => {
   const handleClick = (value: any) => {
     console.log(value);
   };
-  // add the display after all work on the functionality
+  // add the display then get the value out after all work on the functionality
   return (
     <button
       onClick={() => handleClick(value)}

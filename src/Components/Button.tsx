@@ -2,15 +2,17 @@ import { useState } from "react";
 
 interface val {
   value: number | string;
+  query: any;
 }
-const Button: React.FC<val> = ({ value }) => {
+const Button: React.FC<val> = ({ value, query }) => {
   const [yellow] = useState(["/", "X", "-", "+", "="]);
   const [gray] = useState(["AC", "+-", "%"]);
 
   const isYellow = yellow.includes(value as any);
   const isGray = gray.includes(value as any);
   const handleClick = (value: any) => {
-    console.log(value);
+    // console.log(value);
+    query(value);
   };
   // add the display then get the value out after all work on the functionality
   return (

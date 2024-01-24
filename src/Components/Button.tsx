@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface val {
-  value: number | string;
+  value: string;
   query: any;
 }
 const Button: React.FC<val> = ({ value, query }) => {
@@ -18,8 +18,8 @@ const Button: React.FC<val> = ({ value, query }) => {
   return (
     <button
       onClick={() => handleClick(value)}
-      className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl 
-    ${value == 0 ? "w-[8.2rem]" : "w-[3.5rem]"}
+      className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl
+    ${value == "0" ? "w-[8.2rem]" : "w-[3.5rem]"}
     ${
       !isYellow && !isGray
         ? "bg-[#292929]"

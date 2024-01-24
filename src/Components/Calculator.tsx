@@ -4,25 +4,24 @@ import Screen from "./Screen";
 
 const Calculator = () => {
   const [query, setQuery] = useState("");
-  console.log(query);
   const [options, _setOptions] = useState([
     "AC",
     "+-",
     "%",
     "/",
-    7,
-    8,
-    9,
+    "7",
+    "8",
+    "9",
     "X",
-    4,
-    5,
-    6,
+    "4",
+    "5",
+    "6",
     "-",
-    1,
-    2,
-    3,
+    "1",
+    "2",
+    "3",
     "+",
-    0,
+    "0",
     ".",
     "=",
   ]);

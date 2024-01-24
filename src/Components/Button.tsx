@@ -17,14 +17,14 @@ const Button: React.FC<val> = ({ value, query }) => {
   return (
     <button
       onClick={() => handleClick(value)}
-      className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl
+      className={`h-[3.5rem] rounded-full flex justify-center items-center text-2xl
     ${value == "0" ? "w-[8.2rem]" : "w-[3.5rem]"}
     ${
       !isYellow && !isGray
-        ? "bg-[#292929]"
+        ? "bg-[#292929] text-white font-semibold"
         : isYellow
-        ? "bg-[#fea400]"
-        : "bg-[#7f7f7f]"
+        ? "bg-[#fea400] text-white font-semibold"
+        : "bg-[#7f7f7f] text-black font-[650]"
     }
       `}
     >

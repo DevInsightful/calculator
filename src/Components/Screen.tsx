@@ -13,7 +13,7 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
   console.log(screenContent);
 
   return (
-    <div className="bg-gray-500 p-5 text-white block w-[100%]">
+    <div className="text-4xl text-right p-5 text-white block w-[100%]">
       {screenContent}
     </div>
   );

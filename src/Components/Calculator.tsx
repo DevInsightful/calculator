@@ -1,31 +1,38 @@
+import { useState } from "react";
+import Button from "./Button";
+import Screen from "./Screen";
+
 const Calculator = () => {
-<<<<<<< Updated upstream
-=======
   const [query, setQuery] = useState("");
+  console.log(query);
   const [options, _setOptions] = useState([
     "AC",
     "+-",
     "%",
     "/",
-    "7",
-    "8",
-    "9",
+    7,
+    8,
+    9,
     "X",
-    "4",
-    "5",
-    "6",
+    4,
+    5,
+    6,
     "-",
-    "1",
-    "2",
-    "3",
+    1,
+    2,
+    3,
     "+",
-    "0",
+    0,
     ".",
     "=",
   ]);
->>>>>>> Stashed changes
   return (
-    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl"></div>
+    <div className="calculator main bg-black h-[65vh] w-[20vw] rounded-2xl flex flex-wrap gap-4 justify-center overflow-hidden">
+      <Screen query={query} />
+      {options.map((options, idx) => {
+        return <Button value={options} key={idx} query={setQuery} />;
+      })}
+    </div>
   );
 };
 

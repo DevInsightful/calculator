@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-const Button = () => {
-  return <div className=""></div>;
-=======
 import { useState } from "react";
 
 interface val {
-  value: string;
+  value: number | string;
   query: any;
 }
 const Button: React.FC<val> = ({ value, query }) => {
@@ -23,7 +19,7 @@ const Button: React.FC<val> = ({ value, query }) => {
     <button
       onClick={() => handleClick(value)}
       className={` text-white h-[3.5rem] rounded-full flex justify-center items-center font-semibold text-2xl 
-    ${value == "0" ? "w-[8.2rem]" : "w-[3.5rem]"}
+    ${value == 0 ? "w-[8.2rem]" : "w-[3.5rem]"}
     ${
       !isYellow && !isGray
         ? "bg-[#292929]"
@@ -36,7 +32,6 @@ const Button: React.FC<val> = ({ value, query }) => {
       {value}
     </button>
   );
->>>>>>> Stashed changes
 };
 
 export default Button;

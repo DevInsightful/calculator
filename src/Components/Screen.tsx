@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Screen: React.FC<{ query: any }> = ({ query }) => {
-  const [screenContent, setScreenContent] = useState();
-  useEffect(() => {
-    setScreenContent(query);
-  }, []);
-  console.log(screenContent);
+  const [screenContent, _setScreenContent] = useState(query);
   return (
     <div className="bg-red-500 p-5 text-white block w-[100%]">
-      {/* {screenContent} */}
+      {screenContent}
       {query}
     </div>
   );

@@ -14,7 +14,6 @@ const Button: React.FC<val> = ({ value, query }) => {
     // console.log(value);
     query(value);
   };
-  // add the display then get the value out after all work on the functionality
   return (
     <button
       onClick={() => handleClick(value)}

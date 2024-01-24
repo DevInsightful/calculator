@@ -1,1 +1,1 @@
-we should now work on getting the value on the display right and debug that why is giving the empty string on the board iam getting the prop right but can not set that prop even not by using useEffect
+write the notes here

@@ -4,7 +4,6 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
   const [screenContent, setScreenContent] = useState<string | null>(null);
 
   useEffect(() => {
-    // Update screenContent based on the previous value and the new query
     setScreenContent((prevContent) =>
       prevContent ? prevContent + query : query
     );

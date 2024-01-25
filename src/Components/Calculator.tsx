@@ -6,7 +6,7 @@ const Calculator = () => {
   const [query, setQuery] = useState("");
   const [options, _setOptions] = useState([
     "AC",
-    "+-",
+    "DEL",
     "%",
     "/",
     "7",

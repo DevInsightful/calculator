@@ -3,11 +3,17 @@ import React, { useEffect, useState } from "react";
 const Screen: React.FC<{ query: any }> = ({ query }) => {
   const [screenContent, setScreenContent] = useState<string | null>(null);
   useEffect(() => {
-    query == "AC"
-      ? setScreenContent("")
-      : setScreenContent((prevContent) =>
-          prevContent ? prevContent + query : query
-        );
+    if (query === "AC") {
+      setScreenContent("");
+    } else if (query === "DEL") {
+      setScreenContent((prevContent) =>
+        prevContent ? prevContent.slice(0, -1) : ""
+      );
+    } else {
+      setScreenContent((prevContent) =>
+        prevContent ? prevContent + query : query
+      );
+    }
   }, [query]);
 
   console.log(screenContent);

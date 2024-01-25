@@ -6,7 +6,7 @@ interface val {
 }
 const Button: React.FC<val> = ({ value, query }) => {
   const [yellow] = useState(["/", "X", "-", "+", "="]);
-  const [gray] = useState(["AC", "+-", "%"]);
+  const [gray] = useState(["AC", "DEL", "%"]);
 
   const isYellow = yellow.includes(value as any);
   const isGray = gray.includes(value as any);

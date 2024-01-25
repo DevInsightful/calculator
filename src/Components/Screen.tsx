@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 
 const Screen: React.FC<{ query: any }> = ({ query }) => {
   const [screenContent, setScreenContent] = useState<string | null>(null);
-
   useEffect(() => {
-    setScreenContent((prevContent) =>
-      prevContent ? prevContent + query : query
-    );
+    query == "AC"
+      ? setScreenContent("")
+      : setScreenContent((prevContent) =>
+          prevContent ? prevContent + query : query
+        );
   }, [query]);
 
   console.log(screenContent);

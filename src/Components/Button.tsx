@@ -11,7 +11,6 @@ const Button: React.FC<val> = ({ value, query }) => {
   const isYellow = yellow.includes(value as any);
   const isGray = gray.includes(value as any);
   const handleClick = (value: any) => {
-    // console.log(value);
     query(value);
   };
   return (

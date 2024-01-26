@@ -9,6 +9,11 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
       setScreenContent((prevContent) =>
         prevContent ? prevContent.slice(0, -1) : ""
       );
+    } else if (query === "=") {
+      // setScreenContent((prevContent) =>
+      //   prevContent ? eval(screenContent) : ""
+      // );
+      screenContent?setScreenContent(eval(screenContent)):''
     } else {
       setScreenContent((prevContent) =>
         prevContent ? prevContent + query : query

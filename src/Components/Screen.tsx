@@ -7,7 +7,7 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
       setScreenContent("");
     } else if (query === "DEL") {
       setScreenContent((prevContent) =>
-        prevContent ? prevContent.slice(0, -1) : ""
+        screenContent?.length && prevContent ? prevContent.slice(0, -1) : ""
       );
     } else if (screenContent && query === "=") {
       setScreenContent(eval(screenContent))

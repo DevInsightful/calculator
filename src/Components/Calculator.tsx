@@ -26,12 +26,11 @@ const Calculator = () => {
     "=",
   ]);
   return (
-    <div className="calculator main bg-black h-[80vh] w-[20vw] rounded-3xl flex flex-wrap gap-4 justify-center overflow-hidden">
+    <div className="calculator main bg-black min-h-[80vh] h-dfit w-[20vw] rounded-3xl flex flex-wrap gap-4 justify-center overflow-hidden">
       <Screen query={query} />
       {options.map((options, idx) => {
         return <Button value={options} key={idx} query={setQuery} />;
       })}
-      //{" "}
     </div>
   );
 };

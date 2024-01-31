@@ -10,21 +10,14 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
         screenContent?.length && prevContent ? prevContent.slice(0, -1) : ""
       );
     } else if (screenContent && query === "=") {
-      // const replaceXWithAsterisk = () => {
       const updatedContent = screenContent.replace(/X/g, "*");
-      // setScreenContent(updatedContent);
-      // };
-      console.log(screenContent);
       setScreenContent(eval(updatedContent));
-    } else {     
-
-       setScreenContent((prevContent) =>
+    } else {
+      setScreenContent((prevContent) =>
         prevContent ? prevContent + query : query
       );
     }
   }, [query]);
-
-  console.log(screenContent);
 
   return (
     <div className="text-4xl p-3 pb-0 text-white flex justify-end items-end w-[100%] h-[7rem]">

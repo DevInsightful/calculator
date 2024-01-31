@@ -10,10 +10,7 @@ const Screen: React.FC<{ query: any }> = ({ query }) => {
         screenContent?.length && prevContent ? prevContent.slice(0, -1) : ""
       );
     } else if (screenContent && query === "=") {
-      // const replaceXWithAsterisk = () => {
       const updatedContent = screenContent.replace(/X/g, "*");
-      // setScreenContent(updatedContent);
-      // };
       console.log(screenContent);
       setScreenContent(eval(updatedContent));
     } else {     

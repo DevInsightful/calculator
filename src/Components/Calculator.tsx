@@ -26,7 +26,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator main bg-black min-h-[80vh] h-full max-w-[20vw] rounded-3xl flex flex-wrap gap-4 justify-center overflow-hidden">
-      <Screen content={screenContent} />
+      <Screen query={screenContent} />
       {[
         "AC",
         "DEL",

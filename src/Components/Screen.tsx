@@ -21,7 +21,8 @@ const Screen: React.FC<{ query: string | null }> = ({ query }) => {
 
   return (
     <div className="text-4xl p-3 pb-0 text-white flex justify-end items-end w-[100%] h-[7rem]">
-      {content}
+      {screenContent}
+      {/* {query} */}
     </div>
   );
 };
